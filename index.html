@@ -33,8 +33,10 @@
 </head>
 <body>
   <h2>Whatsapp Random Number</h2>
-  <input type="tel" name="number" id="number">
-  <button id="go">GO!</button>
+  <form action="javascript:void(0);" onsubmit="go()">
+    <input type="tel" name="number" id="number">
+    <button type="submit" id="go">GO!</button>
+  </form>
   <script>
     function go() {
       let num = document.getElementById('number').value;
@@ -44,8 +46,6 @@
       }
       location.href = 'http://wa.me/' + num;
     }
-    const buttonGo = document.getElementById('go');
-    buttonGo.addEventListener('click', go);
   </script>
 </body>
 </html>
